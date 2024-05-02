@@ -2,6 +2,8 @@
 
 namespace net\authorize\api\contract\v1;
 
+use ReturnTypeWillChange;
+
 /**
  * Class representing CustomerProfileMaskedType
  *
@@ -165,6 +167,7 @@ class CustomerProfileMaskedType extends CustomerProfileExType implements \JsonSe
 
 
     // Json Serialize Code
+    #[ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){

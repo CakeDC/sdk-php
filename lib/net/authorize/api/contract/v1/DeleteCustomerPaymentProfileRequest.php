@@ -2,6 +2,8 @@
 
 namespace net\authorize\api\contract\v1;
 
+use ReturnTypeWillChange;
+
 /**
  * Class representing DeleteCustomerPaymentProfileRequest
  */
@@ -64,6 +66,7 @@ class DeleteCustomerPaymentProfileRequest extends ANetApiRequestType
 
 
     // Json Serialize Code
+    #[ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){

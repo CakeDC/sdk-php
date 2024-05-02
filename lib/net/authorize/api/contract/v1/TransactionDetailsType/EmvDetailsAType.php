@@ -2,6 +2,8 @@
 
 namespace net\authorize\api\contract\v1\TransactionDetailsType;
 
+use ReturnTypeWillChange;
+
 /**
  * Class representing EmvDetailsAType
  */
@@ -78,6 +80,7 @@ class EmvDetailsAType implements \JsonSerializable
 
 
     // Json Serialize Code
+    #[ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){

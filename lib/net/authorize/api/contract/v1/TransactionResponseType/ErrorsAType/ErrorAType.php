@@ -2,6 +2,8 @@
 
 namespace net\authorize\api\contract\v1\TransactionResponseType\ErrorsAType;
 
+use ReturnTypeWillChange;
+
 /**
  * Class representing ErrorAType
  */
@@ -64,6 +66,7 @@ class ErrorAType implements \JsonSerializable
 
 
     // Json Serialize Code
+    #[ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){

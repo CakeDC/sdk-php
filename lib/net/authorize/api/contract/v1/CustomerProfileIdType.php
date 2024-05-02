@@ -2,6 +2,8 @@
 
 namespace net\authorize\api\contract\v1;
 
+use ReturnTypeWillChange;
+
 /**
  * Class representing CustomerProfileIdType
  *
@@ -94,6 +96,7 @@ class CustomerProfileIdType implements \JsonSerializable
 
 
     // Json Serialize Code
+    #[ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){
