@@ -31,8 +31,9 @@ class Log
     private $sensitiveXmlTags = NULL;
     private $logFile = '';
     private $logLevel = ANET_LOG_LEVEL;
-	
-	/**
+    private $sensitiveStringRegexes;
+
+    /**
 	* Takes a regex pattern (string) as argument and adds the forward slash delimiter.
 	* Also adds the u flag to enable Unicode mode regex.
 	*
